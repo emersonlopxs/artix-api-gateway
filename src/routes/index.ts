@@ -1,9 +1,7 @@
 import { Router } from 'express'
-import posts from './v1/posts'
-// import axios from 'axios'
-
+import launches from './v1/Launches'
 const router = Router()
 
-router.use('/posts', posts)
+router.use('/spacex/launches', launches)
 
 export default router
