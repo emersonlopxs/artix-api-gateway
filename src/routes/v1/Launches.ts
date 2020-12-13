@@ -5,10 +5,10 @@ const router = Router()
 
 router.get('/', async (request, response) => {
   try {
-    const launches = LaunchesService.findAll()
+    const launches = await LaunchesService.findAll()
     return response.status(200).json(launches)
   } catch (error) {
-    console.log('error')
+    return response.status(500).json(error)
   }
 })
 
